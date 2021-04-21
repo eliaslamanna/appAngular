@@ -1,0 +1,7 @@
+<form [formGroup]="myForm">
+    <input type="text" placeholder="Usuario" formControlName="nombre"><br>
+    <h5 *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">Ingrese un nombre valido</h5>
+    <input type="password" placeholder="Contraseña" formControlName="password">
+    <h5 *ngIf="myForm.get('password').errors && myForm.get('password').dirty">Ingrese una contraseña</h5>
+</form>
+<button>Loggear</button>

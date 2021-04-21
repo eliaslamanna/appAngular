@@ -1,0 +1,14 @@
+<h1>Registro:</h1>
+<form [formGroup]="myForm">
+    <input type="text" placeholder="Nombre" formControlName="nombre"><br>
+    <h5 *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">Ingrese un nombre valido</h5>
+    <input type="text" placeholder="Apellido" formControlName="apellido"><br>
+    <h5 *ngIf="myForm.get('apellido').errors && myForm.get('apellido').dirty">Ingrese un apellido valido</h5>
+    <input type="number" placeholder="Telefono" formControlName="telefono"><br>
+    <h5 *ngIf="myForm.get('telefono').errors && myForm.get('telefono').dirty">Ingrese un telefono valido</h5>
+    <input type="email" placeholder="Email" formControlName="email"><br>
+    <h5 *ngIf="myForm.get('email').errors && myForm.get('email').dirty">Ingrese un email valido</h5>
+    <input type="password" placeholder="Contraseña" formControlName="password"><br>
+    <h5 *ngIf="myForm.get('password').errors && myForm.get('password').dirty">Ingrese una contraseña valida</h5>
+</form>
+
